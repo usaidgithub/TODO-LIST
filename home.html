@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="todo-container">
+            <input type="text" id="taskInput" name="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">Add Task</button>
+            <button id="logoutBtn"><a href="http://localhost:3000/logout">Logout</a></button>
+            <div class="task_container"></div>
+        </div>
+    </div>
+    <div class="form">
+        <span class="close-icon">&times;</span>
+        <h3>Enter the details here</h3>
+        <form action="http://localhost:3000/update_record" method="POST">
+            <input type="hidden" name="id" id="id">
+            <label for="update_value">Record:</label>
+            <input type="text" id="update_value" name="update_value" placeholder="Enter the Updated Record" required>
+            <div class="wrap">
+                <button type="submit" id="click">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/fetch.js"></script>
+</body>
+</html>
